@@ -46,11 +46,15 @@ function subscriptToUPLogin() {
         // generating a token with 1 day of expiration time
         const token = await Web3Token.sign(async (msg) => {
           try {
-            const sig = await web3.eth.sign(msg, address);
-
+            let sig;
+            try {
+              sig = await web3.eth.sign(msg, address);
+            } catch (err) {
+	      sig = await web3.eth.personal.sign(msg, address);
+	    }
             console.log("signature", { sig, address });
 
-            return sig.signature;
+            return typeof sig === 'string' ? sig : sig.signature;
           } catch (err) {
             console.error(">>> catch", err);
           }
