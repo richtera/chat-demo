@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JSXC example application</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <link href="css/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" />
+
+    <!-- require:dependencies -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@jsxc/jsxc@4.4.0/dist/styles/jsxc.bundle.css"
+      integrity="sha256-6h/Ws33i/l56pldMy7hdMovzEfjtW6U7sxhBcJTWNQ4="
+      crossorigin="anonymous"
+    />
+    <!-- <link href="../dist/styles/jsxc.bundle.css" media="all" rel="stylesheet" type="text/css" /> -->
+    <!--  endrequire -->
+
+    <link href="css/example.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="js/web3-token.umd.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.4/web3.min.js"
+      integrity="sha512-oMd9Re3VgJcXuZJn9DN6X7S7JUc7xLYZ2UyZ85Mm/xzaW3lwBr4fV2zjuu/n5jY/Of/2JOx35CTa6zvQNxb31Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container" id="content" role="main">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="page-header">JSXC <small>example</small></h1>
+
+          <div class="row">
+            <div class="col-md-6">
+              <details>
+                <summary>Advanced controls</summary>
+                <p>
+                  <a class="btn btn-danger" href="javascript:jsxc.deleteAllData()">Delete all Data</a>
+                  <a class="btn btn-default" href="javascript:jsxc.enableDebugMode()">Enable Debug Mode</a>
+                  <a class="btn btn-default" href="javascript:jsxc.disableDebugMode()">Disable Debug Mode</a>
+                </p>
+
+                <p>
+                  <a class="btn btn-default" href="javascript:$('body').removeClass('jsxc-fullscreen jsxc-two-columns')"
+                    >Normal Layout</a
+                  >
+                  <a class="btn btn-default" href="javascript:$('body').addClass('jsxc-fullscreen jsxc-two-columns')"
+                    >Two Columns Layout</a
+                  >
+                  <a
+                    class="btn btn-default"
+                    href="javascript:$('body').removeClass('jsxc-two-columns').addClass('jsxc-fullscreen')"
+                    >Fullscreen Layout</a
+                  >
+                </p>
+
+                <p>
+                  <a class="btn btn-default" href="javascript:$('body').addClass('jsxc-dark')">Dark Mode</a>
+                  <a class="btn btn-default" href="javascript:$('body').removeClass('jsxc-dark')">Light Mode</a>
+                </p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-md-3">
+          <h3>UP Login</h3>
+          <button id="up-login-button">Login with Extension</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- only needed for the example script -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- require:optional -->
+    <script src="https://cdn.jsdelivr.net/npm/libsignal-protocol-nodejs@0.1.4/dist/libsignal.js"></script>
+    <!--  endrequire -->
+
+    <!-- jsxc library -->
+    <!-- <script src="../dist/jsxc.bundle.js"></script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@jsxc/jsxc@4.4.0/dist/jsxc.bundle.js"
+      integrity="sha256-FTQSKscCcH+6ocPKNBqZeIZBgstF3ssD1bwl9LUx9V8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/example.js"></script>
+    <script src="js/helper.js"></script>
+  </body>
+</html>
