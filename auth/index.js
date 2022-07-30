@@ -1,4 +1,4 @@
-#!/Users/andy/.nvm/versions/node/v16.16.0/bin/node
+#!/usr/bin/env node
 const Web3 = require('web3');
 const Web3Token = require('web3-token');
 const auth = require('ejabberd-auth');
